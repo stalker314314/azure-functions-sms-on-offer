@@ -49,9 +49,14 @@ public static void Run(string inputQueue, IQueryable<Offer> inputTable, ICollect
             });
         
         // Send SMS now
+        //
         MessageResource.Create(
             from: new PhoneNumber("+16283000024"),
             to: new PhoneNumber("+381693141592"),
+            body: $"{inputOffer.url}, cena: '{inputOffer.price}', oglas: '{inputOffer.text}', ");
+        MessageResource.Create(
+            from: new PhoneNumber("+16283000024"),
+            to: new PhoneNumber("+38163234145"),
             body: $"{inputOffer.url}, cena: '{inputOffer.price}', oglas: '{inputOffer.text}', ");
     }
 }
