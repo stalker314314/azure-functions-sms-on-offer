@@ -1,0 +1,28 @@
+{
+  "bindings": [
+    {
+      "name": "inputQueue",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "queueName": "offers",
+      "connection": "funkcije",
+      "accessRights": "Manage"
+    },
+    {
+      "type": "table",
+      "name": "inputTable",
+      "tableName": "offers",
+      "take": 50,
+      "connection": "functiondf13ada08e25_STORAGE",
+      "direction": "in"
+    },
+    {
+      "type": "table",
+      "name": "outputTable",
+      "tableName": "offers",
+      "connection": "functiondf13ada08e25_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

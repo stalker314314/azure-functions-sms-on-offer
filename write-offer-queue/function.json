@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "type": "timerTrigger",
+      "name": "timer",
+      "schedule": "0 0 * * * *",
+      "direction": "in"
+    },
+    {
+      "type": "serviceBus",
+      "name": "outputQueue",
+      "queueName": "offers",
+      "connection": "funkcije",
+      "accessRights_": "Manage",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
